@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import styles from "./NeuralNetworkViz.module.css";
-import { AIThinkingData, NeuralActivations } from "../types";
+import { AIThinkingData } from "../types";
 
 interface NeuralNetworkVizProps {
   aiThinking: AIThinkingData | null;
@@ -38,10 +38,11 @@ const NeuralNetworkViz: React.FC<NeuralNetworkVizProps> = ({ aiThinking }) => {
 
   const { neural_activations, predicted_move, encoded_state } = aiThinking;
 
+  // Change JSX.Element to React.ReactElement
   const renderNeuronLayer = ({
     layerName,
     activations,
-  }: LayerRenderProps): JSX.Element => {
+  }: LayerRenderProps): React.ReactElement => {
     const maxActivation = Math.max(...activations.map(Math.abs));
 
     return (
