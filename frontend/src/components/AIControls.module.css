@@ -1,0 +1,147 @@
+.ai-controls {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.ai-controls h4 {
+  margin: 0 0 15px 0;
+  color: white;
+  text-align: center;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.start-btn {
+  background: linear-gradient(145deg, #4caf50, #45a049);
+  color: white;
+}
+
+.stop-btn {
+  background: linear-gradient(145deg, #f44336, #e53935);
+  color: white;
+}
+
+.reset-btn {
+  background: linear-gradient(145deg, #ff9800, #f57c00);
+  color: white;
+}
+
+.toggle-btn {
+  background: linear-gradient(145deg, #9c27b0, #7b1fa2);
+  color: white;
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.speed-control label {
+  white-space: nowrap;
+}
+
+.speed-slider {
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.speed-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.speed-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.connection-warning {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .control-btn {
+    width: 200px;
+    justify-content: center;
+  }
+
+  .speed-control {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}

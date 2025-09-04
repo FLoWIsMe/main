@@ -1,0 +1,167 @@
+.neural-viz-container {
+  padding: 20px;
+}
+
+.neural-viz-container h3 {
+  color: #333;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.network-structure {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  min-width: 120px;
+}
+
+.layer h4 {
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.neurons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.neuron {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: help;
+  min-width: 35px;
+}
+
+.neuron:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.move-analysis {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f0f4ff;
+  border-radius: 10px;
+}
+
+.move-analysis h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.prediction-details {
+  margin-bottom: 20px;
+}
+
+.predicted-move {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  font-size: 16px;
+}
+
+.probability-chart {
+  margin-top: 20px;
+}
+
+.probability-chart h5 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.game-state-encoding {
+  margin: 30px 0;
+  padding: 20px;
+  background: #fff8e1;
+  border-radius: 10px;
+}
+
+.game-state-encoding h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.encoded-vector {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  justify-content: center;
+}
+
+.encoded-bit {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  background: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.encoded-bit.active {
+  background: #4caf50;
+  color: white;
+  border-color: #45a049;
+}
+
+.encoding-legend {
+  text-align: center;
+  margin-top: 10px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .network-structure {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .layer {
+    margin: 0;
+  }
+
+  .neurons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 200px;
+  }
+
+  .encoded-vector {
+    justify-content: flex-start;
+  }
+}
